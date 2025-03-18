@@ -1,0 +1,24 @@
+public class EvenOddPattern {
+    public static void main(String[] args) {
+        int rows = 5;
+        int n = 0;
+        for(int i=1;i<=rows;i++){
+            int a[] = new int[i];
+            for(int j=0;j<i;j++){
+             n += 1;
+             a[j] = n;
+            }
+            if( i%2 == 0){
+                for(int j=i-1; j>=0; j--){
+                    System.out.print(a[j] + " ");
+                }
+            }
+            else{
+                 for(int j=0;j<i;j++){
+                  System.out.print(a[j] + " ");                  
+                }
+            }
+            System.out.println();
+            }
+        }
+}
