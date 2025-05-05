@@ -1,0 +1,22 @@
+ public class TrapeziumPattern {
+    public static void main(String[] args) {
+        int topWidth = 5;    // Number of stars in the top row
+        int height = 5;      // Number of rows
+        int increase = 2;    // How much wider each row gets
+
+        for (int i = 0; i < height; i++) {
+            int stars = topWidth + i * increase;
+            for (int j = 0; j < stars; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+Sample Output:
+*****
+*******
+*********
+***********
+*************
