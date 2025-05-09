@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class HollowTriangle {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // Input number of rows
+        System.out.print("Enter number of rows: ");
+        int rows = scanner.nextInt();
+        for (int i = 1; i <= rows; i++) {
+            // Print leading spaces
+            for (int j = i; j < rows; j++) {
+                System.out.print(" ");
+            }
+            // Print stars and hollow spaces
+            for (int k = 1; k <= (2 * i - 1); k++) {
+                if (k == 1 || k == (2 * i - 1) || i == rows) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            // Move to next line
+            System.out.println();
+        }
+        scanner.close();
+    }
+}
+
+output:
+    *
+   * *
+  *   *
+ *     *
+*********
