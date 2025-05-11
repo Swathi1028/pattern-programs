@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class HollowTrapezium {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter height of trapezium: ");
+        int height = sc.nextInt();
+        System.out.print("Enter base width (top width): ");
+        int base = sc.nextInt();
+        // You can adjust the bottom width increment
+        int bottomWidth = base + (height - 1) * 2;
+        for (int i = 0; i < height; i++) {
+            int stars = base + i * 2;
+            int spacesBefore = height - i - 1;
+            // Print leading spaces
+            for (int s = 0; s < spacesBefore; s++) {
+                System.out.print(" ");
+            }
+            // Print pattern
+            for (int j = 0; j < stars; j++) {
+                if (i == 0 || i == height - 1 || j == 0 || j == stars - 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+        sc.close();
+    }
+}
