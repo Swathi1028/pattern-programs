@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class HollowEquilateralTriangle {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // Input: height of the triangle
+        System.out.print("Enter the height of the triangle: ");
+        int height = scanner.nextInt();
+        for (int i = 1; i <= height; i++) {
+            // Print leading spaces to center the triangle
+            for (int s = 1; s <= height - i; s++) {
+                System.out.print(" ");
+            }
+            // Print stars and spaces
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                if (j == 1 || j == (2 * i - 1) || i == height) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+        scanner.close();
+    }
+}
+
+output: for heiglt=5
+    *
+   * *
+  *   *
+ *     *
+*********
