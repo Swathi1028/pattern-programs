@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class HollowParallelogram {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // Input: number of rows and columns
+        System.out.print("Enter the number of rows: ");
+        int rows = scanner.nextInt();
+        System.out.print("Enter the number of columns: ");
+        int columns = scanner.nextInt();
+        for (int i = 0; i < rows; i++) {
+            // Print leading spaces to shift the row right
+            for (int s = 0; s < rows - i - 1; s++) {
+                System.out.print(" ");
+            }
+            // Print stars and spaces to make the hollow part
+            for (int j = 0; j < columns; j++) {
+                if (i == 0 || i == rows - 1 || j == 0 || j == columns - 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+        scanner.close();
+    }
+}
+output:for rows = 5, columns = 7
+    *******
+   *     *
+  *     *
+ *     *
+*******
